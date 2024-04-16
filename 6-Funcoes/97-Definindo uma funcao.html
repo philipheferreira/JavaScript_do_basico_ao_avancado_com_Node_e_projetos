@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		/* Funções são estruturas de codigos menores que são reaproveitadas durante a execução/construção de um programa */
+		/* Principal objetivo: poupar repetição de código. Podem ser considerados subprogramas */
+
+		/*
+		Uma função tem uma estrutura um pouco mais complexa, devemos declarar a função sempre com a palavra function.
+		Uma função deve ter um nome, pode conter argumentos/parâmetros, definidos entre ().
+		O corpo da função é definido entre {}. Geralmente uma função retorna um valor e é possivel declarar funções em variáveis.
+
+		*/
+
+
+		function imprimirConsole(){
+			console.log("Primeiro teste função"); /* Função criada */
+		}
+
+		imprimirConsole(); /* Após a criação da função é só chamar ela, pode chamar quantas vezes quiser que ela vai repitir a primeira operação */
+		imprimirConsole();
+		imprimirConsole();
+
+		function imprimirUmNumero(num){
+
+			console.log("O seu numero é esse: " + num);
+
+		}
+
+		imprimirUmNumero(2);
+		imprimirUmNumero(9);
+		imprimirUmNumero(6);
+		imprimirUmNumero(5);
+
+		const numeroAleatorio = function() {
+			console.log(Math.random());
+		}
+
+		numeroAleatorio();
+		numeroAleatorio();
+
+	</script>
+
+</body>
+</html>
