@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		/* Por causa da possibilidade de criar um escopo, podemos ter mais niveis de escopo */
+
+		let a = 10;
+
+			function multiplicar(x , y){ 
+				let a = x * y;
+
+				if(a > 10){ 
+
+					let a = 0;
+
+					a++;
+
+					console.log(a);
+				}
+
+			console.log(a);
+
+			}
+
+		console.log(a);
+
+		multiplicar(3,7);
+
+	</script>
+
+</body>
+</html>
