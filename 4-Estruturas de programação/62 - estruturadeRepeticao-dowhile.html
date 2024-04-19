@@ -8,22 +8,26 @@
 <body>
 
 	<script type="text/javascript">
-
-		/* O que acontece dentro de uma função fica separado do escopo global. O escopo global seria todo o arquivo de javascript */
 		
-		let y = 10;
 
-		function imprimir(){
-			let y = 150;
+		/* Semelhante ao while, porém a estrutura muda um pouco. Este método quase não é utilizado! */
 
+		let y = 0;
+
+		do {
 			console.log(y);
-		}
+			y = y + 1;
+		}while(y < 5);
 
-		imprimir();
+		let x = 100;
 
-		console.log(y);
+		do{
+			console.log(x/2);
+			x = x - 5;
+		} while( x >= 0);
 
 	</script>
+
 
 </body>
 </html>
