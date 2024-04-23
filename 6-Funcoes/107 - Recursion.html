@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		// Uma funcionalidade que permite uma função se chamar novamente; => basicamente é uma função que chama ela mesma e C
+
+		// Isso pode ser um problema caso a função se chame muitas vezes;
+
+		// EX1:
+
+		function retornarNumeroPar(n){
+			if(n % 2 == 0){
+				console.log("n agora é par: " + n);
+			}else{
+				console.log(n);
+				retornarNumeroPar(n - 1);
+			}
+		}
+
+		retornarNumeroPar(33);
+
+		console.log("Começo da segunda recursão");
+		// EX2: 
+
+		function recursao(n){
+
+			if((n - 1) < 2){
+				console.log("Recursão Parou");
+			}else if(n % 2 != 0){
+				console.log("Numero ímpar" + n);
+				recursao(n - 1);
+			}else{
+				console.log("Numero par " + n);
+				recursao(n - 2);
+			}
+
+		}
+
+		recursao(10);
+		recursao(15);
+		recursao(18);
+
+
+	</script>
+
+
+</body>
+</html>

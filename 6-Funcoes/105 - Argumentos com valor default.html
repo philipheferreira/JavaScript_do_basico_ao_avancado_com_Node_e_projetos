@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		// Podemos pre-determinar um valor para um argumento
+
+		function repetirFrase(frase, n = 2){ // caso não seja recebido nenhum argumento esse é o valor pre definido
+			for(let x = 1; x <= n; x++){
+				console.log(frase + " "+ x);
+			}
+		}
+
+		repetirFrase("Testando", 5);
+		repetirFrase("Só duas vezes");
+
+
+		function potencia(base, exp = 2){
+			return Math.pow(base, exp);
+		}
+
+		console.log(potencia(2));
+
+		console.log(potencia(2,2));
+
+		console.log(potencia(2,5));
+
+	</script>
+
+
+</body>
+</html>
