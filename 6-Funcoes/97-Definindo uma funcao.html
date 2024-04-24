@@ -19,7 +19,7 @@
 
 		*/
 
-
+		// PRIMEIRA FORMA DE CRIAR UMA FUNÇÃO
 		function imprimirConsole(){
 			console.log("Primeiro teste função"); /* Função criada */
 		}
@@ -39,12 +39,27 @@
 		imprimirUmNumero(6);
 		imprimirUmNumero(5);
 
+		// SEGUNDA FORMA DE CRIAR UMA FUNÇÃO
 		const numeroAleatorio = function() {
 			console.log(Math.random());
 		}
 
 		numeroAleatorio();
 		numeroAleatorio();
+
+		// TECEIRA FORMA DE CRIAR FUNÇÕES - ARROW FUNCTION
+
+		let consoleTeste = () => {
+			console.log("Olá mundo!");
+		};
+
+		let soma = (a, b) => {
+			return a + b;
+		};
+
+		consoleTeste();
+
+		console.log(soma(10,20));
 
 	</script>
 

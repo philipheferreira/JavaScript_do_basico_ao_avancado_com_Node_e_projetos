@@ -9,16 +9,27 @@
 
 	<button class="btns">testar</button>
 
+	<button class="btn1">teste da outra função</button>
 	
 	<script type="text/javascript">
 		
 		/* Ações condicionadas a algum tipo de resposta feita pelo usuário. Por exemplo: Clicks, apertar alguma tecla ou até movimento do mouse. Podemos atrelar lógica a essas ações do usuário por meio de handlers */
-
+		// PRIMEIRO METODO DE CRIAÇÃO DE EVENTOS
 		let btn = document.querySelector(".btns"); /* criando um evento com base em uma classe */
 
-		btn.addEventListener("click", function(){
+		btn.addEventListener("click", function(){ /* forma mais pratica e direta de criar uma função atraves de um evento */
 			console.log("Clicou");
-		})
+		});
+
+		// SEGUNDO METODO DE CRIAÇÃO DE EVENTOS
+
+		let btn1 = document.querySelector(".btn1");
+
+		function msg(){
+			console.log("Clicando com o outro metodo");
+		}
+
+		btn1.addEventListener("click", msg);
 
 	</script>
 
