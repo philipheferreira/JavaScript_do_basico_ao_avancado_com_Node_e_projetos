@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<button class="btn">Operação</button>
+
+
+	<script type="text/javascript">
+		
+		let btn = document.querySelector(".btn");
+
+		function msg() { //Criando uma função que é chamada para o evento
+			console.log("Click"); 
+		}
+
+		btn.addEventListener("click", msg);
+
+		setTimeout(function(){
+			btn.removeEventListener("click", msg);
+		}, 3000);
+	</script>
+
+
+</body>
+</html>
