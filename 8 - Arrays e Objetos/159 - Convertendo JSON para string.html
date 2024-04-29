@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		const car = {
+			"brand" : "BMW",
+			"Wheels" : 4,
+			"doors" : 2,
+			"type" : "Sedan"
+		}
+
+		let jsonToString = JSON.stringify(car); // tudo foi convertido em uma string
+
+		console.log(jsonToString);
+
+		let stringToJson = JSON.parse(jsonToString); // a string foi convertida em um objeto
+
+		console.log(stringToJson)
+
+	</script>
+
+</body>
+</html>

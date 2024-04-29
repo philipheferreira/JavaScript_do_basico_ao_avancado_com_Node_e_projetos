@@ -9,8 +9,18 @@
 
 	<script type="text/javascript">
 		
-		
+		// Podemos definir variáveis com propriedades do objeto com uma notação diferente, chamada destructuring
 
+		const person = {
+			nome : 'Jhon',
+			ultimoNome: 'Doe'
+		}
+
+		const {nome: fnome, ultimoNome: lnome} = person;
+
+		console.log(fnome);
+
+		console.log(lnome);
 
 	</script>
 
