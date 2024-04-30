@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		/* O prototype do JavaScript pode ser chamado de classe, pois nas outras linguagens uma Class é um molde de um objeto, ou seja, podemos criar diversos objetos em cima de um prototype; */
+
+		let cachorro = {
+			patas: 4,
+			raca: 'SRD',
+			latir: function(){
+				console.log("Au Au")
+			}
+		}
+
+		let pastorAlemao = Object.create(cachorro);
+
+		pastorAlemao.latir();
+
+		pastorAlemao.raca = 'Pastor Alemão';
+
+		console.log(pastorAlemao.raca);
+		console.log(cachorro.raca);
+
+		let labrador = Object.create(cachorro);
+
+		labrador.raca = "Labrador";
+
+		console.log(labrador.raca);
+
+	</script>
+
+</body>
+</html>

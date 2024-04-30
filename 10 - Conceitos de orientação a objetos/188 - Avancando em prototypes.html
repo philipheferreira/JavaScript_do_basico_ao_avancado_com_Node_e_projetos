@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		/* Quando criamos um objeto a partir de um outro, o base será o prototype. Ele herdará tanto os métodos e propriedades de Object (O prototype do objeto base); Quanto os do objeto base para este novo; */
+
+		let pessoa = {
+			maos: 2,
+		}
+
+		let pessoaNova = Object.create(pessoa);
+
+		console.log(pessoaNova.maos);
+		console.log(Object.getPrototypeOf(pessoaNova) == pessoa);
+
+	</script>
+
+</body>
+</html>

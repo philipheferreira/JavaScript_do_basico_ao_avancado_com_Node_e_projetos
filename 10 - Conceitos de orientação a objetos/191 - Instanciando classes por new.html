@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function Cachorro(raca, patas, cor){
+			this.raca = raca;
+			this.patas = patas;
+			this.cor = cor;
+			this.uivar = function() {
+				console.log("Auuuuuuuu");
+			}
+		}
+
+		let husky = new Cachorro('Husky', 4, 'branco');
+
+		console.log(husky.raca);
+
+		husky.uivar();
+	</script>
+
+</body>
+</html>
