@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		let ladoQuadrado = 8;
+		let alturaRetangulo = 10, ladoRetangulo = 4;
+		let pi = 3.14;
+		let diametroCirculo = 8;
+
+
+		function calculoAreaQuadrado(num){
+			return 4 * num;
+		}
+
+		function calculoAreaRetangulo(num1, num2){
+			return num1 * num2;
+		}
+
+		function calculoAreaCirculo(num){
+			return 2 * pi * ((num / 2) * (num / 2 ))
+		}
+
+
+		let areaQuadrado = calculoAreaQuadrado(ladoQuadrado);
+		let areaRetangulo = calculoAreaRetangulo(alturaRetangulo, ladoRetangulo);
+		let areaCirculo = calculoAreaCirculo(diametroCirculo);
+
+		console.log( " " + areaQuadrado + " " + areaRetangulo + " " + areaCirculo );
+	</script>
+
+</body>
+</html>
