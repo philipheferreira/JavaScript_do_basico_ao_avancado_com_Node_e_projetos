@@ -13,6 +13,8 @@
 		let alturaRetangulo = 10, ladoRetangulo = 4;
 		let pi = 3.14;
 		let diametroCirculo = 8;
+		let trianguloBase = 10;
+		let trianguloAltura = 3;
 
 
 		function calculoAreaQuadrado(num){
@@ -27,12 +29,17 @@
 			return 2 * pi * ((num / 2) * (num / 2 ))
 		}
 
+		function calculoAreaTriangulo(num1, num2){
+			return (num1 * num2)/ 2;
+		}
 
 		let areaQuadrado = calculoAreaQuadrado(ladoQuadrado);
 		let areaRetangulo = calculoAreaRetangulo(alturaRetangulo, ladoRetangulo);
 		let areaCirculo = calculoAreaCirculo(diametroCirculo);
+		let areaTriangulo = calculoAreaTriangulo(trianguloBase, trianguloAltura);
 
-		console.log( " " + areaQuadrado + " " + areaRetangulo + " " + areaCirculo );
+		
+		console.log( " " + areaQuadrado + " " + areaRetangulo + " " + areaCirculo + " " + areaTriangulo );
 	</script>
 
 </body>
