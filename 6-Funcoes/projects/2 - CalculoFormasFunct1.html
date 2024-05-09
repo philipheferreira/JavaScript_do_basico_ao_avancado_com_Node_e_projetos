@@ -10,25 +10,32 @@
 	<script type="text/javascript">
 		
 
-		let ladoQuadradao, alturaRetangulo, ladoRetangulo, diametroCirculo;
+		let ladoQuadrada = 8, alturaRetangulo = 4, ladoRetangulo = 9, diametroCirculo = 8;
 
 		let areaQuadrado,areaRetangulo, areaCirculo;
 
-		function operacaoAreaQuadrado(){
-
+		function operacaoAreaQuadrado(num){
+			return num * num;
 		}
 
-		function operacao(){
-
+		function operacaoAreaRetangulo(num1, num2){
+			return num1 * num2;
 		}
 
-		function operacao(){
-
+		function operacaoAreaCirculo(num){
+			return 3.14 * ((num / 2) * (num / 2));
 		}
 
-		function operacao(){
-			
-		}
+		areaQuadrado = operacaoAreaQuadrado(ladoQuadrada);
+
+		areaRetangulo = operacaoAreaRetangulo(alturaRetangulo, ladoRetangulo);
+
+		areaCirculo = operacaoAreaCirculo(diametroCirculo);
+
+
+		console.log("O valor do lado do quadrado é " + ladoQuadrada + ", a sua area é " + areaQuadrado);
+		console.log("A altura do retangulo é " + alturaRetangulo + "e a base é " + ladoRetangulo + ", logo a area é " + areaRetangulo);
+		console.log("O diametro do circulo é "+ diametroCirculo + ", logo a area do circulo é  " + areaCirculo);
 
 	</script>
 
