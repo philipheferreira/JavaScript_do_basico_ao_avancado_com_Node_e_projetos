@@ -7,44 +7,40 @@
 </head>
 <body>
 
+
 	<script type="text/javascript">
 		
-		let numero1 = 10, numero2 = 2; 
-		let somaNumeros, subNumeros, multNumeros, divNumeros;
-		let nome = "Philiphe Ferreira";
 
-		function soma(num1,num2){
+		let numero1 = 40, numero2 = 20;
+		let soma, sub, div, mult;
+
+		function operacaoSoma(num1, num2){
 			return num1 + num2;
 		}
 
-		function sub(num1,num2){ 
+		function operacaoSub(num1, num2){
 			return num1 - num2;
 		}
 
-		function mult(num1,num2){
-			return num1 * num2;
-		}
-
-		function div(num1,num2){
+		function OperacaoDiv(num1, num2){
 			return num1 / num2;
 		}
 
+		function OperacaoMult(num1, num2){
+			return num1 * num2;
+		}
 
-		somaNumeros = soma(numero1, numero2);
+		soma = operacaoSoma(numero1, numero2);
+		sub = operacaoSub(numero1, numero2);
+		div = OperacaoDiv(numero1, numero2);
+		mult = OperacaoMult(numero1, numero2);
 
-		subNumeros = sub(numero1, numero2);
-
-		multNumeros = mult(numero1, numero2);
-
-		divNumeros = div(numero1, numero2);
-
-		console.log( nome + " a primeira variavel tem o valor de " + numero1 + " e a segunda variavel é " + numero2);
-		console.log( nome + " a soma das duas variaveis é " + somaNumeros );
-		console.log( nome + " a subtração das duas variaveis é " + subNumeros );
-		console.log( nome + " a multiplicação das duas variaveis é " + multNumeros );
-		console.log( nome + " a divisão das duas variaveis é " + divNumeros );
-
+		console.log("O valor da primeira variavel é " + numero1 + " O valor da segunda variavel " + numero2 + ", a soma dos dois é: " + soma);
+		console.log("O valor da primeira variavel é " + numero1 + " O valor da segunda variavel " + numero2 + ", a subtração dos dois é: " + sub);
+		console.log("O valor da primeira variavel é " + numero1 + " O valor da segunda variavel " + numero2 + ", a multiplicação dos dois é: " + div);
+		console.log("O valor da primeira variavel é " + numero1 + " O valor da segunda variavel " + numero2 + ", a divisão dos dois é: " + mult);
 	</script>
+
 
 </body>
 </html>
