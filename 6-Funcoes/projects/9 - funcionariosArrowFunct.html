@@ -9,13 +9,16 @@
 
 	<script type="text/javascript">
 		
-		let x = 10, y = 20;
+		let nomeFuncionario1 = "Leornado Vasco da Gama"; 
+		let cargoFuncionario1 = "Desenvolvedor Back-end";
+		let salarioFuncionario1 = 2400;
 
-		let teste = (number1, number2) => {
-			console.log(` o primeiro numero é ${number1} e o segundo é ${number2}`)
+		let infoFuncionario = (nome, cargo, salario) => {
+			return `Ola funcionario, seu nome é ${nome}, seu cargo é ${cargo} e você recebe ${salario}`;
 		}
-		
-		teste(x, y);
+
+		console.log(infoFuncionario(nomeFuncionario1, cargoFuncionario1, salarioFuncionario1));
+
 	</script>
 
 </body>
