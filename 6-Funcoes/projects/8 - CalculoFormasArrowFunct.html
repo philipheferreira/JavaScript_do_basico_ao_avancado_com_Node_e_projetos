@@ -9,10 +9,18 @@
 
 	<script type="text/javascript">
 		
-		let ladoQuadrado = 5;
+		let ladoQuadrado = 5, larguraRetangulo = 20, alturaRetangulo = 5, diametroCirculo = 8, pi = 3.14;
 
 		let operacaoAreaQuardado = (x) => {
 			console.log(`O valor do lado do quadrado é ${ladoQuadrado}, a area é ${ladoQuadrado * ladoQuadrado}`);
+		}
+
+		let operacaoAreaRetangulo = (x, y) => {
+			console.log(`O valor da altura do Retangulo é ${x} e a base é ${y}, logo a área é ${x * y}`);
+		}
+
+		let operacaoAreaCirculo = (x) => {
+			console.og(`O valor do diametro é ${x}, logo a area do circulo é ${this.pi * ((x / 2) * (x / 2))}`);
 		}
 
 		operacaoAreaQuardado(ladoQuadrado);

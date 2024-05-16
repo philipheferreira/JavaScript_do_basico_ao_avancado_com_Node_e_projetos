@@ -9,18 +9,32 @@
 
 	<script type="text/javascript">
 		
-		let ladoQuadrado = 5;
+		let pi = 3.14, ladoQuadrado = 5, alturaRetangulo = 10, larguraRetangulo = 7, diametroCirculo = 8;
 
-		let areaQuadrado;
+		let areaQuadrado, areaRetangulo, areaCirculo;
 
 
-		let operacaoAreaQuadrado = function(ladoQuadrado){
-			return ladoQuadrado * ladoQuadrado;
+		let operacaoAreaQuadrado = function(num){
+			return num * num;
+		}
+
+		let operacaoAreaRetangulo = function(num1, num2){
+			return num1 * num2;
+		}
+
+		let operacaoAreaCirculo = function(num){
+			return this.pi * ((num / 2) * (num/ 2));
 		}
 		
 		areaQuadrado = operacaoAreaQuadrado(ladoQuadrado);
 
+		areaRetangulo = operacaoAreaRetangulo(ladoQuadrado, alturaRetangulo);
+
+		areaCirculo = operacaoAreaCirculo(diametroCirculo);
+
 		console.log("O valor do seu lado é " + ladoQuadrado + " e o valor da area do quadrado é " + areaQuadrado);
+		console.log("O valor da altura do retangulo é "+ alturaRetangulo + " e o da largura é " + larguraRetangulo + ", logo a area do retangulo é " + areaRetangulo);
+		console.log("O valor do diametro do circulo é " + diametroCirculo + ", logo a area do circuloe é " +  areaCirculo);
 	</script>
 
 </body>

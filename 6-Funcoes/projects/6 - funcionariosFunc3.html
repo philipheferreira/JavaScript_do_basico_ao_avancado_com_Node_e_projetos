@@ -9,14 +9,17 @@
 
 	<script type="text/javascript">
 		
-		let nome = "Philiphe";
-		let idade = 19;
+		let nomeFuncionario1 = "Philiphe Ferreira", nomeFuncionario2 = "MCfalen Love", nomeFuncionario3 = "Ed Sheren";
+		let cargoFuncionario1 = "desenvolvedor Front-end", cargoFuncionario2 = "desenvolvedor Back-end", cargoFuncionario3 = "analista de teste";
+		let salarioFuncionario1 = 2400.00, salarioFuncionario2 = 6800.99, salarioFuncionario3 = 4560.00;
 
-		let infoTrabalhador = function(nome, idade){
-			console.log("Ola " + nome + "você tem " + idade);
+		let infoTrabalhador = function(nome, cargo, salario){
+			console.log("Olá funcionario " + nome + "você possui o cargo " + cargo + " e recebe a quantidade " + salario + "R$ por seus serviços");
 		}
 
-		infoTrabalhador(nome,idade);
+		infoTrabalhador(nomeFuncionario1, cargoFuncionario1, salarioFuncionario1);
+		infoTrabalhador(nomeFuncionario2, cargoFuncionario2, salarioFuncionario2);
+		infoTrabalhador(nomeFuncionario3, cargoFuncionario3, salarioFuncionario3);
 		
 	</script>
 
