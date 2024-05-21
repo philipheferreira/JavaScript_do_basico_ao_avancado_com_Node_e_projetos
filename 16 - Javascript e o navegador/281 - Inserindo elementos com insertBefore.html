@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>08 - Insert before</title>
+</head>
+<body>
+
+	<p>Insere um nó antes do nó de referência do método;</p>
+	<p>Precisamos de um elemento para ser adicionado;</p>
+	<p>O elemento que terá o outro elemento adicionado antes dele;</p>
+	<p>E o elemento pai destes dois;</p>
+
+	<div id="container-principal">
+		<h1 id="titulo-principal">Algum título</h1>
+		<p>Algum texto no parágrafo</p>
+		<div>
+			<p>Mais texto</p>
+		</div>
+	</div>
+	<div>
+		<ul>
+			<li class="itens itens-azuis">Alguma coisa 1</li>
+			<li class="itens itens-azuis">Alguma coisa 2</li>
+			<li class="itens itens-azuis">Alguma coisa 3</li>
+		</ul>
+		<ul>
+			<li class="itens itens-vermelhos">Alguma coisa 1</li>
+			<li class="itens itens-vermelhos">Alguma coisa 2</li>
+			<li class="itens itens-vermelhos">Alguma coisa 3</li>
+		</ul>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		
+		let novoElemento = document.createElement("p");
+		let elementoAlvo = document.querySelector("#titulo-principal");
+		let elementoPai = document.querySelector("#container-principal");
+		
+		elementoPai.insertBefore(novoElemento, elementoAlvo);
+
+		let texto = document.createTextNode("Algum texto"); // Cria um texto utilizando node
+
+
+	</script>
+
+
+</body>
+</html>
