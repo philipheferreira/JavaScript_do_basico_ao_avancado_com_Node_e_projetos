@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 09 - appendChild</title>
+</head>
+<body>
+
+	<div>
+		<h1 id="container-principal"></h1>
+		<p id="titulo-principal">Algum texto no parágrafo</p>
+		<div>
+			<p>Mais texto</p>
+		</div>
+	</div>
+	<div>
+		<ul>
+			<li class="itens itens-azuis">Alguma coisa 1</li>
+			<li class="itens itens-azuis">Alguma coisa 2</li>
+			<li class="itens itens-azuis">Alguma coisa 3</li>
+		</ul>
+		<ul>
+			<li class="itens itens-azuis">Alguma coisa 1</li>
+			<li class="itens itens-azuis">Alguma coisa 2</li>
+			<li class="itens itens-azuis">Alguma coisa 3</li>
+		</ul>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		
+		let novoElemento = document.createElement("p"); // Será criado um novo elemento estilo paragrafo
+		let texto = document.createTextNode("Algum texto"); // texto que sera usando no appendChild que é um paragrafo
+
+		novoElemento.appendChild(texto); // usa o elemento criado, utilizando o appendChild para crialo após o pai
+
+		let p = document.querySelector("#paragrafo principal"); // cria um paragrafo pai
+		let pai = p.parentNode; // não sei
+
+		pai.appendChild(novoElemento);
+
+	</script>
+
+</body>
+</html>

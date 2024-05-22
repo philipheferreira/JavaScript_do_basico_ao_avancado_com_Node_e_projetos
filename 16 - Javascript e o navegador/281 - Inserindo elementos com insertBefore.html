@@ -39,12 +39,16 @@
 
 		
 		let novoElemento = document.createElement("p");
-		let elementoAlvo = document.querySelector("#titulo-principal");
-		let elementoPai = document.querySelector("#container-principal");
+		let texto = document.createTextNode("Algum texto"); // Cria um texto utilizando node
+
+		novoElemento.appendChild(texto);
+
+		let elementoAlvo = document.querySelector("#titulo-principal"); // titulo foi escolhido como o elemento para colocar o texto usando o node antes
+		let elementoPai = document.querySelector("#container-principal"); // O elemento pai é a div em que o child está dentro, no HTML, tornando ela a div maior
 		
 		elementoPai.insertBefore(novoElemento, elementoAlvo);
 
-		let texto = document.createTextNode("Algum texto"); // Cria um texto utilizando node
+		
 
 
 	</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<p>Podemos criar um nó de texto puro e inserir em um elemento;</p>
+
+	<p id="sem-Texto"></p> //Texto criado para receber valor pelo node
+
+	<script type="text/javascript">
+		
+		let pSemTexto = document.getElementById("sem-Texto");
+
+		let texto = document.createTextNode("Este texto está sendo inserido pelo javascript");
+
+		pSemTexto.appendChild(texto); 
+
+
+
+	</script>
+
+
+</body>
+</html>
