@@ -6,8 +6,9 @@
 button{
 	background-color: #121212;
 	color: #FFFFFF;
-	margin: 200px;
-	width: 100px;
+
+	margin: 0 50px;
+	width: 200px;
 	height: 50px;
 	transition: 0.8s;
 }
