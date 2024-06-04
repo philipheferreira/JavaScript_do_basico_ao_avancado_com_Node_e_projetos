@@ -9,6 +9,7 @@ let mostrar = document.querySelector(".mostrador");
 btn1.addEventListener("click", Amostra);
 	
 btn2.addEventListener("click", Esconde);
+
 //funções
 
 function Amostra(){
