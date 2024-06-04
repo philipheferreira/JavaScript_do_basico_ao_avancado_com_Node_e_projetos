@@ -16,5 +16,5 @@ function adicionar(){
 function subtrair(){
 	count--;
 	console.log(count);
-	tela.InnerHTML = count
+	tela.innerHTML = count
 }
