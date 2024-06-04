@@ -1,4 +1,23 @@
+.titulo{
+	text-align: center;
+}
+
 .container{
 	display: flex;	
 	justify-content: center;
+}
+
+.botao1, .botao2 {
+
+	background-color: #121212 ;
+	color: #FFFFFF;
+	margin: 0 20px;
+	transition: 0.8s;
+	width: 85px;
+
+}
+
+.botao1:hover, .botao2:hover{
+	background-color: #FFFFFF ;
+	color: #121212;
 }
