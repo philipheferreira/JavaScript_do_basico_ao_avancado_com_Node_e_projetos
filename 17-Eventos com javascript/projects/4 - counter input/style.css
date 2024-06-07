@@ -3,11 +3,20 @@
 }
 
 .mostrador{
+	border: solid 2px;
+	width: 100px;
+	margin: 20px;
 	text-align: center;
+	background-color: #FFFFFF;
 }
 
 .container{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 
+}
+
+.infos{
+	flex-direction: row;
 }
