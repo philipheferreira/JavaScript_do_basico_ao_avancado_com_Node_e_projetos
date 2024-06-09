@@ -25,3 +25,8 @@
 	.bloco_1, .bloco_2, .bloco_3{
 		margin: 10px;
 	}
+
+	.enviar{
+		background-color: #121212;
+		color: #FFFFFF;
+	}
