@@ -1,3 +1,27 @@
+
 	.container{
 		display: flex;
+		justify-content: center;
+	}
+
+	form{
+		margin-top: 200px;
+		background-color:#cceeff ;
+		border-radius: 10px;
+		height: 200px;
+		width: 300px;
+	}
+
+
+
+	.nome_1{
+		margin-right: 17px;
+	}
+
+	.nome_3{
+		margin-right:17.5px;
+	}
+
+	.bloco_1, .bloco_2, .bloco_3{
+		margin: 10px;
 	}
