@@ -3,5 +3,13 @@
 	}
 
 	.botao{
-		
+		background-color: #121212;
+		color: #FFFFFF;
+		transition: 0.8s;
+	}
+
+	.botao:hover{
+		background-color: #FFFFFF;
+		color: #121212;
+		cursor: pointer;
 	}
