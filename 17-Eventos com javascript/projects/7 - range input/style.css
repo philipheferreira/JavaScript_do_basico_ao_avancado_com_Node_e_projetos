@@ -3,5 +3,19 @@ body{
 }
 
 .container{
+	display: flex;
+	flex-direction: column;
+	
+}
 
+.botao{
+	color: #FFFFFF;
+	background-color: #121212;
+	transition: 0.8s;
+}
+
+.botao:hover{
+	color: #121212;
+	background-color: #FFFFFF;
+	cursor: pointer;
 }
