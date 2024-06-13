@@ -1,2 +1,3 @@
-variavel = document.querySelector(".variante");
+let variavel = document.querySelector(".meuRange");
 
+let visor = variavel.value;
