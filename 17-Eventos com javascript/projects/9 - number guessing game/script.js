@@ -14,6 +14,4 @@ btn.addEventListener("click", function(){
 	}else {
 		alert("Errou, tente um numero maior");
 	}
-
-
 });
