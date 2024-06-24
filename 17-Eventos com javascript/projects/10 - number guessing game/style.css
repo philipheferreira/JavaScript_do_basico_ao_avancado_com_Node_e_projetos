@@ -1,29 +1,32 @@
 .container{
 	display: flex;
 	flex-direction: column;
-	align-content: center;
-	height: auto;
-	width: auto;
+	justify-content: center; /* centraliza na vertical */
+	align-items: center; /* Centraliza os itens dentro do container no centro dele na horizontal central */
+	height: 500px;
+	width: 100%;
 	background-color: #8cb3d9;
 }
 
 .bloco_1{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: center; /* Centraliza na vertical */
+	align-items: center; /* Centraliza os itens dentro do bloco_1 na horizontal central */
 	border: 2px solid red;
 	width: 200px;
 	height: 150px;
-	padding: 10px;/* distancia entre os itens e a borda */
 	background-color: #3333ff;
 }
 
 .info{
-	margin-top: 200px;
 	text-align: center;
 	background-color: #ad33ff;
+	width: 200px;
 }
 
 .Escrito{
 	margin-bottom: 10px;
+	text-align: center;
+	width: 80px;
 }

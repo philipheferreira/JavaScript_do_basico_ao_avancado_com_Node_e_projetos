@@ -4,6 +4,8 @@ let valor = Math.floor(Math.random() * 10 + 1);
 let valorEscrito = document.querySelector(".Escrito");
 let btn = document.querySelector(".botao");
 
+valorEscrito.value = 0;
+
 btn.addEventListener("click", function(){
 	let x = valorEscrito.value;
 
