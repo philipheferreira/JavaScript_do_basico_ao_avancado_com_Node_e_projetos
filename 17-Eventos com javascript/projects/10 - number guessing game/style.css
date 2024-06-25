@@ -14,6 +14,7 @@
 	justify-content: center; /* Centraliza na vertical */
 	align-items: center; /* Centraliza os itens dentro do bloco_1 na horizontal central */
 	border: 2px solid red;
+	border-radius: 20px;
 	width: 200px;
 	height: 150px;
 	background-color: #3333ff;

@@ -2,7 +2,7 @@
 	text-align: center;
 }
 
-.container{
+.botoes{
 	display: flex;	
 	justify-content: center;
 }
@@ -20,4 +20,10 @@
 .botao1:hover, .botao2:hover{
 	background-color: #FFFFFF ;
 	color: #121212;
+	cursor: pointer;
+}
+
+.mostrador{
+	text-align: center;
+	margin-top: 150px;
 }
