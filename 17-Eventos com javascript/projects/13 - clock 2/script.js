@@ -1,16 +1,21 @@
+
 localHoras = document.querySelector(".horas");
-localMinutos = document.queySelector(".minutos");
+localMinutos = document.querySelector(".minutos");
 localSegundos = document.querySelector(".segundos")
-const hoje = new Date();
 
 let iniciarRelogio = () => {
+
+	const hoje = new Date();
 	let hora = hoje.getHours();
 	let minuto = hoje.getMinutes();
 	let segundo = hoje.getSeconds();
 
+
 	localHoras.innerHTML = hora;
 	localMinutos.innerHTML = minuto;
 	localSegundos.innerHTML = segundo;
+	setTimeout(iniciarRelogio, 1000);
 }
 
-document.onload = iniciarRelogio();
+document.body.onload = iniciarRelogio(); // onloadd para carregar a função automaticamente quando inicializar a pagina
+
