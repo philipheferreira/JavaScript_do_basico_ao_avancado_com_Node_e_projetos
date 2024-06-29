@@ -4,6 +4,6 @@ function iniciarRelogio(){
 	let minutos = hoje.getMinutes(); /*  */
 	let segundos = hoje.getSeconds(); /*  */
 	document.querySelector(".relogio").innerHTML = horas + ":" + minutos + ":" + segundos;
-	setTimeout(startTime, 1000); /* A cada 1 segundo a pagina reenvia informações */ 
+	setTimeout(iniciarRelogio, 1000); /* A cada 1 segundo a pagina renicializa a função de data relogio, chamando ela mesma */ 
 }
 
