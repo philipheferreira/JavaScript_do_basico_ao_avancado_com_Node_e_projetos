@@ -10,3 +10,11 @@ let btnSete = document.querySelector(".sete");
 let btnOito = document.querySelector(".oito");
 let btnNove = document.querySelector(".nove");
 
+//funções criadas para ouvir eventos
+
+let funcaoZero = () => {
+	console.log("O valor é zero");
+}
+
+// criação de escutadores de evento
+btnZero.addEventListener("click", funcaoZero);
