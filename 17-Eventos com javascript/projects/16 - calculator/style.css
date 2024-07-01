@@ -1,0 +1,11 @@
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+}
+
+.calculadora{
+	border: 2px solid red;
+	padding: 20px;
+}
