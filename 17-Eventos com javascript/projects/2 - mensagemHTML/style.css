@@ -1,6 +1,23 @@
-.container{
+.container{ /* Serve para centralizar todas as opções dentro do container na pagina */
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: auto;
+}
+
+.mensagem{
+	margin: 10px;
+}
+
+.mostrador{
+	margin: 10px;
+}
+
+
+.botoes{
+	margin-top: 100px;
 }
 
 button{
@@ -16,4 +33,5 @@ button{
 button:hover{
 	background-color: #FFFFFF;
 	color: #121212;
+	cursor: pointer;
 }

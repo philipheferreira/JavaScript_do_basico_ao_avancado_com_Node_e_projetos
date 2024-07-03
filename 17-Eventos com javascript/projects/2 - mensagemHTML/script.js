@@ -14,7 +14,7 @@ btn2.addEventListener("click", Esconde);
 
 function Amostra(){
 	msg.innerHTML = "Agora você pode ver a mensagem secreta";
-	mostrar.innerHTML = "Amora";
+	mostrar.innerHTML = "Eu sou a mensagem secreta";
 }
 
 function Esconde(){
