@@ -2,8 +2,15 @@
 //variaveis criadas
 let btnNascimento = document.querySelector(".botaoNascimento");
 let valorNascimento = document.querySelector(".dataNascimento");
-let idade = document.querySelector(".idade");
+let idade = document.querySelector(".receberIdade");
 let recebeDataDeNascimento = document.querySelector(".dataDeNascimento");
+let viveuEmAnos = document.querySelector(".viveuEmAnos");
+let viveuEmMeses = document.querySelector(".viveuEmMeses")
+let viveuEmSemanas = document.querySelector(".viveuEmSemanas");
+let viveuEmDias = document.querySelector(".viveuEmDias");
+let viveuEmHoras = document.querySelector(".viveuEmHoras");
+let viveuEmMinutos = document.querySelector(".viveuEmMinutos");
+let viveuEmSegundos = document.querySelector(".viveuEmSegundos");
 let dataNascimento = 0;
 
 //Variaveis criadas para ajudar no calculo das operações
@@ -59,6 +66,14 @@ let pegarData = () => {
 		);
 
 		idade.innerHTML = `${anosTotais} Anos ${totalDeMeses} Meses ${totalDeDias} Dias`;
+
+		viveuEmAnos.innerHTML = anosTotais;
+		viveuEmMeses.innerHTML = MesesTotais;
+		viveuEmSemanas.innerHTML = semanasTotais;
+		viveuEmDias.innerHTML = diasTotais;
+		viveuEmHoras.innerHTML = horasTotais;
+		viveuEmMinutos.innerHTML = minutosTotais;
+		viveuEmSegundos.innerHTML = segundosTotais;
 
 
 
