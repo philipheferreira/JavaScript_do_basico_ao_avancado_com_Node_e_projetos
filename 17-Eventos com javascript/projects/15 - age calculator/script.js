@@ -11,6 +11,7 @@ let viveuEmDias = document.querySelector(".viveuEmDias");
 let viveuEmHoras = document.querySelector(".viveuEmHoras");
 let viveuEmMinutos = document.querySelector(".viveuEmMinutos");
 let viveuEmSegundos = document.querySelector(".viveuEmSegundos");
+let diasFaltando = document.querySelector(".diasFaltandoAniversario");
 let dataNascimento = 0;
 
 //Variaveis criadas para ajudar no calculo das operações
@@ -43,6 +44,7 @@ let pegarData = () => {
 		let MesesTotais = hoje.getMonth() - aniversario.getMonth() + (hoje.getFullYear() - aniversario.getFullYear()) * 12;
 
 		let totalDeMeses = Math.abs(aniversario.getMonth() - hoje.getMonth());
+
 		let totalDeDias = Math.abs(hoje.getDate() - aniversario.getDate());
 
 		let diasTotais = Math.round(
@@ -75,8 +77,16 @@ let pegarData = () => {
 		viveuEmMinutos.innerHTML = minutosTotais;
 		viveuEmSegundos.innerHTML = segundosTotais;
 
+		let diaAniversarioEsseAno = new Date(`${hoje.getFullYear()} - ${aniversario.getMonth() + 1} - ${aniversario.getDate()}`);
+		if (hoje > diaAniversarioEsseAno) {
+			diaAniversarioEsseAno.setFullYear(hoje.getFullYear() + 1);
+		}
 
+		let totalDiasSobrando = Math.round(
+			Math.abs(diaAniversarioEsseAno.getTime() - hoje.getTime()) / umDia
+		);
 
+		diasFaltando.innerText = totalDiasSobrando;
 	}
 
 	dataNascimento = valorNascimento.value;
