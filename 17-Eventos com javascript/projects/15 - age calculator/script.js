@@ -34,8 +34,6 @@ let pegarData = () => {
 	let umaHora = segundos * minutos * minutos;
 	let umMinutos = segundos * minutos;
 
-	console.log("um dia: " + umDia + "\nUma hora: " + umaHora + "\nUm minutos: " + umMinutos);
-
 	let aniversario = new Date(valorNascimento.value);
 	if(valorNascimento.value !== ""){
 
@@ -86,7 +84,9 @@ let pegarData = () => {
 			Math.abs(diaAniversarioEsseAno.getTime() - hoje.getTime()) / umDia
 		);
 
-		diasFaltando.innerText = totalDiasSobrando;
+		diasFaltando.innerHTML = totalDiasSobrando;
+
+		console.log("Dias para o proximo aniversario aniversario" + totalDiasSobrando);
 	}
 
 	dataNascimento = valorNascimento.value;
