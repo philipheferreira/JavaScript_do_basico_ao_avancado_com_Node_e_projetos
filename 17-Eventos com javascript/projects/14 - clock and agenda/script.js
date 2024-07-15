@@ -2,6 +2,7 @@ let campoHoras = document.querySelector(".horas");
 let campoMinutos = document.querySelector(".minutos");
 let campoSegundos = document.querySelector(".segundos");
 
+
 let iniciarTempo = () => {
 	let hoje = new Date();
 	let hora = hoje.getHours();
@@ -15,4 +16,4 @@ let iniciarTempo = () => {
 	setTimeout(iniciarTempo, 1000);
 }
 
-document.onload = iniciarTempo()
+document.body.addEventListener("load", iniciarTempo());
