@@ -4,7 +4,7 @@ let campoSegundos = document.querySelector(".segundos");
 
 
 let iniciarTempo = () => {
-	let hoje = new Date();
+	let hoje = new Date(); // biblioteca Date
 	let hora = hoje.getHours();
 	let minuto = hoje.getMinutes();
 	let segundo = hoje.getSeconds();
@@ -16,4 +16,4 @@ let iniciarTempo = () => {
 	setTimeout(iniciarTempo, 1000);
 }
 
-document.body.addEventListener("load", iniciarTempo());
+document.body.addEventListener("load", iniciarTempo()); // Evento que está direcionando o body, linkando o onload relacionando a funcao iniciartempo()
