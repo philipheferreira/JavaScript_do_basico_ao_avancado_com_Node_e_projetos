@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// Strict Mode
+		/* 
+		Deixa o javaScript mais rigoroso na hora de se programar;
+		Deve ser declarado no topo de arquivos ou funções
+		Colocar o strict ajuda você a codificar de forma correta e não vai impedir/limitar nada no seu software ou programar;
+		*/
+		//"use strict"
+		opa = 'teste'; // Utilizando normalmente não retornara erro, mas se ativar o strict mode ela responderá erro
+
+		delete Object.prototype; // Se estiver fora do strict mode ira funcionar
+
+		function teste(){
+			"use strict"
+			oi = teste
+			delete Object.prototype;
+		}
+
+		teste();
+	</script>
+
+</body>
+</html>
