@@ -14,12 +14,28 @@
 
 		let numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-		console.log(numeros.slice(2,3)); // dividi o array pegando apenas um unico elemento entre as posições 2 e 3;
+		console.log("Os elementos dentro do primeiro array numeros são: ");
+		console.log(numeros);
 
-		console.log(numeros.slice(3)); // Divide o array pegando apenas os numeros a partir da posição 3;
+		console.log("O slice que divide o array numeros divide na posição inicial 2 e termina da 3, pegando um unico elemento que é: " ); // dividi o array pegando apenas um unico elemento entre as posições 2 e 3;
+		console.log(numeros.slice(2,3));
 
-		console.log(numeros.slice(1,4)); // Divide o array pegando os elementos entre as posições 1 e 4;
+		console.log("Usando o array numeros, a posição do slice é a 3, como não foi definido um valor final ela faz um unico corte pegando a ultima parte gerada, ou seja, da 3 posição até a final. Gerando o seguinte resultado:" ); // Divide o array pegando apenas os numeros a partir da posição 3;
+		console.log(numeros.slice(3))
+		console.log("Utilizando o array numeros, pegando a posição zero (A primeira) e a 4 gera o seguinte resultado: "); // Divide o array pegando os elementos entre as posições 1 e 4;
+		console.log(numeros.slice(0,4));
+
+		// utilizando testes e conceitos ainda não testados
+
 		
+		console.log("Testes gerais");
+		console.log([4,6,7,8,9,10].slice(0,3)); //Podesse utilizar um array que não foi criado com antecedencia
+
+		let treino = [2,4,6,8,10,12,14,16,18];
+
+		let treino2 = treino.slice(0,5);
+
+		console.log(treino2);
 	</script>
 
 </body>
