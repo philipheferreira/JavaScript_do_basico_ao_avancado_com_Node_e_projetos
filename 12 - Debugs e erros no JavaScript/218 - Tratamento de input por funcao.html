@@ -8,9 +8,28 @@
 <body>
 	<script type="text/javascript">
 		
-		
-		
-		
+		/*
+		Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do software, devemos tratar eles;
+		Exemplo com number
+		*/
+
+		function chegarNumero(num){
+			let number = Number(num);
+
+			if(Number.isNaN(number)){ // isNaN serve para chegar se o valor é um numero
+				alert("Por favor, digitar apenas numeros para o programa");
+			}else{
+				return number;
+			}
+		}
+
+		checarNumero(5);
+		chegarNumero('saudades');
+
+		let number = prompt("Digite um numero: ");
+
+		checarNumero(number);
+
 		
 	</script>
 </body>
