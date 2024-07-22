@@ -14,6 +14,16 @@
 		
 		console.log(carros.includes("Fiat")); // A info que tiver dentro do includes vai verificar as operações do array
 
+		console.log(carros.includes("BMW", "Fiat", "Gol")); // dentro de um comando pode ser utilizado mais de uma identificação de elemento
+
+		let validar = carros.includes("HB20");
+
+		if(validar == true){
+			console.log("O carro HB20 está dentro da lista");
+		}else{
+			console.log("O carro não está presente na lista");
+		}
+
 	</script>
 
 </body>
