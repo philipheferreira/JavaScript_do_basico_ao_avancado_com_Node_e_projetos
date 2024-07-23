@@ -8,8 +8,25 @@
 <body>
 
 	<script type="text/javascript">
+		/*
+		Além do resolve, há o metodo reject;
+		é quando determinada lógica não satisfaz nosso programa, então podemos ir para outra com o reject, em veze do resolve;
+		Resolve e reject terminam a Promise, ou seja, não podemos chamar mais o then, por exemplo;
+		*/
 		
-		
+		function verificarNumero(num){
+			return new Promise((resolve, reject) => { // sempre quando tem uma promise a gente chama o metodo resolve e o reject para saber quando está certo ou errado
+				if(num == 2){
+					resolve(console.log(`O numero é ${num}`));
+				} else{
+					reject(new Error("Falhou"));
+				}
+			});
+		}
+
+		verificarNumero(2);
+		verificarNumero(3);
+
 	</script>
 
 </body>
