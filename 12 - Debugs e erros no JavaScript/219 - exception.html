@@ -12,10 +12,27 @@
 		Podemos criar erros no programa, caso alguma condição não seja atendida;
 		Porém as exceptions abortam o programa, só geram o erro;
 		*/
+		function Operacao(value){
+			if(value == 1){
+				throw new Error("O valor do numero não pode ser 1");  // quando o codigo parar nessa parte ele ira pausar o codigo e ira notificar o erro do codigo no console do motor de internet
+			} else
+			if(value == 2){
+				throw new Error("O valor do numero não pode ser 2");
+			}else
+			if(value == 3){
+				throw new Error("O valor do numero não pode ser 3");
+			}else
+			if(typeof value != Number){
+				throw new Error("O parametro utilizado precisa ser numero");
+			}else{
+				console.log("O valor digitado é {0}", value);
+			}
+		}
 
-
-
-
+		let x = prompt("Digite o valor do numero: ");
+		console.log(x);
+		Operacao(x);
+		console.log("essa mensagem não aparece pois o codigo termina quando a função operação é chamada");
 	</script>
 
 </body>
