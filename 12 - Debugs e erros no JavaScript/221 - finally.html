@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//finally é executado independente do resultado do try/catch. E pode existir com o try e catch ou apenas o try;
+		let b = 3;
+
+		try{
+			let c = 2 + b;
+		}catch(erro){
+			console.log("O erro ocorrido é: " + erro);
+		}finally{
+			console.log("Programa executado");
+		}
+
+	</script>
+
+</body>
+</html>
