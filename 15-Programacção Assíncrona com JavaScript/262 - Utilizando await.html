@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		/*
+		Nas async functions, podemos determinar uma instrução await;
+		que vai esperar uma promise ser resolvida, para apresentar os resultados;
+		*/
+
+		function somaComDelay(a,b){
+			return new Promise(resolve => {
+				setTimeout(function(){
+					resolve( a + b);
+				}, 2000);
+			});
+		}
+
+		async function soma(a, b, c, d){
+			let x = somaComDelay(a, b);
+			let y = somaComDelay(c,d)
+
+			return await x + await y;
+		}
+
+		soma(2,4, 6, 6).then( t => console.log(t));
+
+	</script>
+
+</body>
+</html>

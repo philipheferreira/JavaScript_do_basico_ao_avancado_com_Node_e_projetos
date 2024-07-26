@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		/*
+		Podemos criar funções assíncronas com a palavra reservada async
+		Elas retornam uma Promise
+		Se retornar algo, a promessa é resolvida, se der alguma exception a promessa é rejeitada
+		*/
+
+		async function somar(a,b){
+			return a + b;
+		}
+
+		somar(2,2).then(function(value){
+			console.log(value);
+		});
+
+	</script>
+
+</body>
+</html>
