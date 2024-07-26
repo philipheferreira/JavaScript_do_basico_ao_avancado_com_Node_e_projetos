@@ -15,8 +15,26 @@
 		caracterizados pelo function* e yield, o yield pode salvar o estad da variável;
 		*/
 
-		
+		function* criadorId(){
+			let id = 0;
+			while(true){
+				yield id++; // yield vai incrementar mais 1 no id e salvar o valor
+			}
+		}
 
+		let criaId = criadorId(); // to salvando a chamada da função dentro de uma variavel
+
+		console.log(criaId.next().value); // next vai chamar a variavel e incrementar ela uma vez e o value é o valor salvo dentro do objeto Id;
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+		console.log(criaId.next().value);
+
+		console.log(criaId.next());
 	</script>
 
 
