@@ -7,9 +7,30 @@
 </head>
 <body>
 	<script type="text/javascript">
-		
+		// Verificações no programa, que são utilizadas para asseugrar que tudo ocorra da forma esperada;
+		let arr = [];
+		let arr2 = [];
 
+		function iterarArray(arr){
+			if(arr.length == 0){ // sistema de verificação 
+				throw new Error("O array precisa ter pelo menos um elemento"); // resposta para possivel erro
+			} else {
+				for(let i = 0; i < arr.length; i++){
+					console.log(i);
+				}
+			}
+		}
 
+		function arrayVazio(arr){
+			if(arr.length > 0){ // sistema de verificação
+				throw Error("O array não pode ter elementos"); // resposta para possivel erro
+			} else {
+				console.log("Agora deu certo");
+			}
+		}
+
+		iterarArray([1,2,3,4,5]); // comando que coloca um array nos pre-requisitos
+		iterarArray(arr2) // info fora dos prerequisitos
 
 
 	</script>
