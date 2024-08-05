@@ -14,11 +14,11 @@ let jogador2 = 0;
 
 for(let i = 0; i < boxes.length; i++){
 
-	boxes[i].addEventListener("click", function(){
+	boxes[i].addEventListener("click", function(){ // Gera um evento que afeta todos os itens da classe box
 
-		let el;
+		let el; // variavel criada para receber e repassar a situação de x ou 0
 
-		if(jogador1 == jogador2){
+		if(jogador1 == jogador2){ // verifica a situação do valor dentro das variaveis jogadores e se forem iguais realiza a ação
 			el = x;
 		} else {
 			el = o;
@@ -27,6 +27,7 @@ for(let i = 0; i < boxes.length; i++){
 		let cloneEl = el.cloneNode(true);
 
 		this.appendChild(cloneEl);
+
 	});
 
 }
