@@ -26,18 +26,21 @@ for(let i = 0; i < boxes.length; i++){
 			//
 		}
 
-		// logica para computar cada uma das jogadas de cada um
-		if(jogador1 == jogador2){ // quando o valor dos jogadores estiver igual ele ira somar +1 para o jogador 1
-			jogador1++;
-		}else{ // como a unica outra situação é um valor diferente entre as variaveis ira aumentar o valor do jogador 2 em +1
-			jogador2++;
+		if(this.childNodes.length == 0){ // verifica se o box tem preenchido algum valor, se não tiver nada dentro adiciona X ou O
+
+			let cloneEl = el.cloneNode(true); // cria uma variavel para clonar dentro dela todo o elemento el
+
+			this.appendChild(cloneEl); // adiciona o clone do elemento dentro da caixa
+
+			// logica para computar cada uma das jogadas de cada um
+			if(jogador1 == jogador2){ // quando o valor dos jogadores estiver igual ele ira somar +1 para o jogador 1
+				jogador1++;
+			}else{ // como a unica outra situação é um valor diferente entre as variaveis ira aumentar o valor do jogador 2 em +1
+				jogador2++;
+			}
+
+
 		}
-
-		let cloneEl = el.cloneNode(true); // cria uma variavel para clonar dentro dela todo o elemento el
-
-		this.appendChild(cloneEl); // adiciona o clone do elemento dentro da caixa
-
-
 
 
 	});
