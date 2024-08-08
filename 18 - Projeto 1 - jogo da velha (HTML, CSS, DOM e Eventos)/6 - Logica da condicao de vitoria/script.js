@@ -115,6 +115,49 @@ function checarVencedor(){
 		}
 	}
 
+	//VITORIAS NA VERTICAL
+	if(b1.childNodes.length > 0 && b4.childNodes.length > 0 && b7.childNodes.length){
+
+		let b1Filho = b1.childNodes[0].className;
+		let b4Filho = b4.childNodes[0].className;
+		let b7Filho = b7.childNodes[0].className;
+
+		if(b1Filho == "x" && b4Filho == "x" && b7Filho == "x"){
+			console.log("Jogador 1 venceu");
+		}else
+		if(b1Filho == "o" && b4Filho == "o" && b7Filho == "o"){
+			console.log("Jogador 2 venceu");
+		}
+	}
+
+	if(b2.childNodes.length > 0 && b5.childNodes.length > 0 && b8.childNodes.length){
+
+		let b2Filho = b2.childNodes[0].className;
+		let b5Filho = b5.childNodes[0].className;
+		let b8Filho = b8.childNodes[0].className;
+
+		if(b2Filho == "x" && b5Filho == "x" && b8Filho == "x"){
+			console.log("Jogador 1 venceu");
+		}else
+		if(b2Filho == "o" && b5Filho == "o" && b8Filho == "o"){
+			console.log("Jogador 2 venceu");
+		}
+	}
+
+	if(b3.childNodes.length> 0 && b6.childNodes.length > 0 && b9.childNodes.length){
+
+		let b3Filho = b3.childNodes[0].className;
+		let b6Filho = b6.childNodes[0].className;
+		let b9Filho = b9.childNodes[0].className
+
+		if(b3Filho == "x" && b6Filho == "x" && b9Filho == "x"){
+			console.log("Jogador 1 venceu");
+		}else
+		if(b3Filho == "o" && b6Filho == "o" && b9Filho == "o"){
+			console.log("Jogador 2 venceu");
+		}
+	}
+	// VITORIAS NA DIAGONAL
 
 
 }
