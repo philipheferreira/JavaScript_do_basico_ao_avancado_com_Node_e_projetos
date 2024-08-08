@@ -34,7 +34,7 @@ for(let i = 0; i < boxes.length; i++){
 		}
 
 		//Checar quem venceu
-
+		checarVencedor();
 
 
 	}
@@ -59,5 +59,62 @@ function checarElemento(jogador1, jogador2){
 }
 
 function checarVencedor(){
-	let b = document.querySelector(".");
+	let b1 = document.querySelector(".block-1");
+	let b2 = document.querySelector(".block-2");
+	let b3 = document.querySelector(".block-3");
+	let b4 = document.querySelector(".block-4");
+	let b5 = document.querySelector(".block-5");
+	let b6 = document.querySelector(".block-6");
+	let b7 = document.querySelector(".block-7");
+	let b8 = document.querySelector(".block-8");
+	let b9 = document.querySelector(".block-9");
+
+
+	// VITORIAS NA HORIZONTAL
+	if(b1.childNodes.length > 0 && b2.childNodes.length > 0 && b3.childNodes.length > 0){
+
+		let b1Filho = b1.childNodes[0].className; // gera filhos para ler os valores dentro das classes
+		let b2Filho = b2.childNodes[0].className;
+		let b3Filho = b3.childNodes[0].className;
+
+		if(b1Filho == "x" && b2Filho == "x" && b3Filho == "x"){
+
+			console.log("O jogador 1 venceu");
+
+		}else 
+		if(b1Filho == "o" && b2Filho == "o" && b3Filho == "o"){
+			console.log("O jogador 2 venceu");
+		}
+	}
+
+	if(b4.childNodes.length > 0 &&  b5.childNodes.length > 0 &&  b6.childNodes.length > 0){
+
+		let b4Filho = b4.childNodes[0].className;
+		let b5Filho = b5.childNodes[0].className;
+		let b6Filho = b6.childNodes[0].className;
+
+		if(b4Filho == "x" && b5Filho == "x" && b6Filho == "x"){
+			console.log("O jogador 1 venceu");
+		}else 
+		if(b4Filho == "o" && b5Filho == "o" && b6Filho == "o"){
+			console.log("O jogador 2 venceu");
+		}
+	}
+
+	if(b7.childNodes.length > 0 && b8.childNodes.length > 0 && b9.childNodes.length){
+
+		let b7Filho = b7.childNodes[0].className;
+		let b8Filho = b8.childNodes[0].className;
+		let b9Filho = b9.childNodes[0].className;
+
+		if(b7Filho == "x" && b8Filho == "x" && b9Filho == "x"){
+			console.log("O jogador 1 venceu");
+		}else
+		if(b7Filho == "o" && b8Filho == "o" && b9Filho == "o"){
+			console.log("O jogador 2 venceu");
+		}
+	}
+
+
+
 }
