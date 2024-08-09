@@ -224,4 +224,24 @@ function declararVencedor(vencedor){
 	// Exibe mensagem
 	mensagemTexto.innerHTML = mensagem;
 	mensagemContainer.classList.remove("hide");
+
+	// esconde mensagem depois de 3 segundos
+
+	setTimeout(function(){
+		mensagemContainer.classList.add("hide");
+	}, 3000);
+
+	// zera as jogadas;
+	jogador1 = 0
+	jogador2 = 0
+
+	// remove todos os x e as bolinhas no jogo da velha
+
+	let boxesToRemove = document.querySelectorAll(".box div");
+
+	setTimeout(function(){
+		for(let i = 0; i < boxesToRemove.length; i++){
+		boxesToRemove[i].parentNode.removeChild(boxesToRemove[i]);
+	}
+	},3000);
 }
