@@ -2,7 +2,7 @@ let x = document.querySelector(".x");
 let o = document.querySelector(".o");
 let boxes = document.querySelectorAll(".box");
 let botoes = document.querySelectorAll(".container-botao button");
-//let messagemContainer = document.querySelector("")
+let mensagemContainer = document.querySelector(".mensagem")
 let mensagemTexto = document.querySelector(".mensagem p");
 let segundoJogador;
 
@@ -79,11 +79,11 @@ function checarVencedor(){
 
 		if(b1Filho == "x" && b2Filho == "x" && b3Filho == "x"){
 
-			console.log("O jogador 1 venceu");
+			declararVencedor("jogador1");
 
 		}else 
 		if(b1Filho == "o" && b2Filho == "o" && b3Filho == "o"){
-			console.log("O jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -94,10 +94,10 @@ function checarVencedor(){
 		let b6Filho = b6.childNodes[0].className;
 
 		if(b4Filho == "x" && b5Filho == "x" && b6Filho == "x"){
-			console.log("O jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else 
 		if(b4Filho == "o" && b5Filho == "o" && b6Filho == "o"){
-			console.log("O jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -108,10 +108,10 @@ function checarVencedor(){
 		let b9Filho = b9.childNodes[0].className;
 
 		if(b7Filho == "x" && b8Filho == "x" && b9Filho == "x"){
-			console.log("O jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else
 		if(b7Filho == "o" && b8Filho == "o" && b9Filho == "o"){
-			console.log("O jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -123,10 +123,10 @@ function checarVencedor(){
 		let b7Filho = b7.childNodes[0].className;
 
 		if(b1Filho == "x" && b4Filho == "x" && b7Filho == "x"){
-			console.log("Jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else
 		if(b1Filho == "o" && b4Filho == "o" && b7Filho == "o"){
-			console.log("Jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -137,10 +137,10 @@ function checarVencedor(){
 		let b8Filho = b8.childNodes[0].className;
 
 		if(b2Filho == "x" && b5Filho == "x" && b8Filho == "x"){
-			console.log("Jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else
 		if(b2Filho == "o" && b5Filho == "o" && b8Filho == "o"){
-			console.log("Jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -151,10 +151,10 @@ function checarVencedor(){
 		let b9Filho = b9.childNodes[0].className
 
 		if(b3Filho == "x" && b6Filho == "x" && b9Filho == "x"){
-			console.log("Jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else
 		if(b3Filho == "o" && b6Filho == "o" && b9Filho == "o"){
-			console.log("Jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 	// VITORIAS NA DIAGONAL
@@ -166,10 +166,10 @@ function checarVencedor(){
 		let b9Filho = b9.childNodes[0].className;
 
 		if(b1Filho == "x" && b5Filho == "x" && b9Filho == "x"){
-			console.log("Jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else
 		if(b1Filho == "o" && b5Filho == "o" && b9Filho == "o"){
-			console.log("Jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -180,10 +180,10 @@ function checarVencedor(){
 		let b7Filho = b7.childNodes[0].className;
 
 		if(b3Filho == "x" && b5Filho == "x" && b7Filho == "x"){
-			console.log("Jogador 1 venceu");
+			declararVencedor("jogador1");
 		}else 
 		if(b3Filho == "o" && b5Filho == "o" && b7Filho == "o"){
-			console.log("Jogador 2 venceu");
+			declararVencedor("jogador2");
 		}
 	}
 
@@ -197,7 +197,31 @@ function checarVencedor(){
 	}
 
 	if(contador == 9){
-		console.log("Não houve vencedor");
+		declararVencedor("empate");
 	}
 
+}
+
+
+// função que limpa o jogo, declara o vencedor e atualiza o placar
+function declararVencedor(vencedor){
+
+	let pontoJogador1 = document.querySelector(".placar-1");
+	let pontoJogador2 = document.querySelector(".placar-2");
+	let mensagem = "";
+
+	if(vencedor == "jogador1"){
+		pontoJogador1.textContent = parseInt(pontoJogador1.textContent) + 1;
+		mensagem = "O Jogador 1 venceu!";
+	}else 
+	if(vencedor == "jogador2"){
+		pontoJogador2.textContent = parseInt(pontoJogador2.textContent) + 1;
+		mensagem = "O Jogador 2 venceu!";
+	}else{
+		mensagem = "Deu Velha!";
+	}
+
+	// Exibe mensagem
+	mensagemTexto.innerHTML = mensagem;
+	mensagemContainer.classList.remove("hide");
 }
