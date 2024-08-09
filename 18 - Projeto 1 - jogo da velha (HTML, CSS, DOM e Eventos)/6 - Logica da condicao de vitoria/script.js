@@ -186,4 +186,18 @@ function checarVencedor(){
 			console.log("Jogador 2 venceu");
 		}
 	}
+
+	// Quando Ninguém ganha
+	let contador = 0;
+
+	for(let i = 0; i < boxes.length; i++){
+		if(boxes[i].childNodes[0] != undefined){
+			contador++;
+		}
+	}
+
+	if(contador == 9){
+		console.log("Não houve vencedor");
+	}
+
 }
