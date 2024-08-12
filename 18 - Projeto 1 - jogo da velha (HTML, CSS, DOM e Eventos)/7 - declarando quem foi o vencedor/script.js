@@ -7,6 +7,7 @@ let mensagemContainer = document.querySelector(".mensagem");
 let mensagemTexto = document.querySelector(".mensagem p");
 let botaoJogadores = document.querySelector(".jogadores");
 let botaoIa = document.querySelector(".ai-jogador");
+let botaoVoltar = document.querySelector(".voltar");
 let segundoJogador;
 
 // Contador de jogadas
@@ -16,10 +17,19 @@ let jogador2 = 0;
 //~Habilitar uso de 2 jogadores
 botaoJogadores.addEventListener("click", function(){
 	jogo.classList.remove("hide");
+	botaoVoltar.classList.remove("hide");
+	botaoJogadores.classList.add("hide");
+	botaoIa.classList.add("hide");
 });
 botaoIa.addEventListener("click", function(){
 	alert("Essa funcionalidade será implementada em breve");
-})
+});
+botaoVoltar.addEventListener("click", function(){
+	jogo.classList.add("hide");
+	botaoVoltar.classList.add("hide");
+	botaoJogadores.classList.remove("hide");
+	botaoIa.classList.remove("hide");
+});
 
 // adicionando o evento de click aos boxes
 
