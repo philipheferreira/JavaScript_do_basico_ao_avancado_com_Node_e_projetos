@@ -6,6 +6,7 @@ let botoes = document.querySelectorAll(".container-botao button");
 let mensagemContainer = document.querySelector(".mensagem");
 let mensagemTexto = document.querySelector(".mensagem p");
 let botaoJogadores = document.querySelector(".jogadores");
+let botaoIa = document.querySelector(".ai-jogador");
 let segundoJogador;
 
 // Contador de jogadas
@@ -16,6 +17,9 @@ let jogador2 = 0;
 botaoJogadores.addEventListener("click", function(){
 	jogo.classList.remove("hide");
 });
+botaoIa.addEventListener("click", function(){
+	alert("Essa funcionalidade será implementada em breve");
+})
 
 // adicionando o evento de click aos boxes
 
