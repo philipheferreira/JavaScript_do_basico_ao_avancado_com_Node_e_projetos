@@ -1,16 +1,21 @@
 let x = document.querySelector(".x");
 let o = document.querySelector(".o");
+let jogo = document.querySelector(".container");
 let boxes = document.querySelectorAll(".box");
 let botoes = document.querySelectorAll(".container-botao button");
-let mensagemContainer = document.querySelector(".mensagem")
+let mensagemContainer = document.querySelector(".mensagem");
 let mensagemTexto = document.querySelector(".mensagem p");
+let botaoJogadores = document.querySelector(".jogadores");
 let segundoJogador;
 
 // Contador de jogadas
 let jogador1 = 0;
 let jogador2 = 0;
 
-
+//~Habilitar uso de 2 jogadores
+botaoJogadores.addEventListener("click", function(){
+	jogo.classList.remove("hide");
+});
 
 // adicionando o evento de click aos boxes
 
