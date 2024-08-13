@@ -2,21 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 150px;
 }
 
-.imagem{
-	margin: 20px;
-}
-
-.botao{
-
-	color: #FFFFFF;
-	background-color: #121212;
-	transition: 0.8s;
-}
-
-.botao:hover{
-	color: #121212;
-	background-color: #FFFFFF;
-	cursor: pointer;
+.imgbotao{
+	width: 180px;
+	height: 30px;
+	margin: 30px;
 }

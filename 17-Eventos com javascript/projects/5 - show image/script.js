@@ -1,24 +1,25 @@
-btn = document.querySelector(".botao");
+let contador = 0;
+let botao = document.querySelector(".imgbotao");
+let imagem = document.querySelector(".imagem");
 
-let valor = 0
+botao.addEventListener("click", function(){
+	contador++;
 
-btn.addEventListener("click", mudar);
-
-function mudar(){
-	valor++;
-	if(valor == 1){
-		document.querySelector(".imagem").src = "img/naruto.jpg"
-		console.log(valor);
-	}else
-	if(valor == 2){
-		document.querySelector(".image").src = "img/dragon_ball.jpg"
-		console.log(valor);
-	}else
-	if(valor == 3){
-		document.querySelector(".image").src = "img/one_peace.jpg"
-		console.log(valor);
-	}else{
-		console.log(valor);
+	if(contador == 3){
+		contador = 0;
 	}
 
+trocarImagem(contador);
+});
+
+function trocarImagem(contador){
+	if (contador == 0){
+		imagem.src = "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/a249096c7812deb8c3c2c907173f3774.jpg";
+	}else
+	if(contador == 1){
+		imagem.src = "https://www.alucare.fr/wp-content/uploads/2023/08/Naruto-scaled.jpg";
+	}else
+	if(contador == 2){
+		imagem.src = "https://istoe.com.br/wp-content/uploads/2024/03/dragon-ball.jpg";
+	}
 }
