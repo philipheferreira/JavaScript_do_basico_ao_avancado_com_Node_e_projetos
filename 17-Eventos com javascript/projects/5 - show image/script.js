@@ -20,6 +20,6 @@ function trocarImagem(contador){
 		imagem.src = "https://www.alucare.fr/wp-content/uploads/2023/08/Naruto-scaled.jpg";
 	}else
 	if(contador == 2){
-		imagem.src = "https://istoe.com.br/wp-content/uploads/2024/03/dragon-ball.jpg";
+		imagem.src = "https://t2.tudocdn.net/721690?w=646&h=284";
 	}
 }
