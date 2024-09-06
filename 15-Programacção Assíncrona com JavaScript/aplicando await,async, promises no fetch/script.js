@@ -72,7 +72,7 @@ const getAPIPokemonAsyncComTryCathPrimeiraChamada = async () => {
 const useData1 = getAPIPokemonAsyncComTryCathPrimeiraChamada();
 console.log(useData1);
 
-// 5 - Organizando a segundo forma de chamar usando a API com o asynct, try, catch 
+// 5 - Organizando a segundo forma de chamar usando a API com o async, try, catch 
 
 const getAPIPokemonAsyncComTryCathSegundaChamada = async () => {
 	try {
@@ -84,7 +84,58 @@ const getAPIPokemonAsyncComTryCathSegundaChamada = async () => {
 	}
 }
 
+getAPIPokemonAsyncComTryCathSegundaChamada().then(useData2 => console.log(useData2));
 
 
 
+// 6 - Organizando a terceira forma de chamar usando a API com o async, try, catch
+
+const getAPIPokemonAsyncComTryCathTerceiraChamada = async () => {
+	try {
+		const response = await fetch("https://pokeapi.co/api/v2/");
+		const data = await response.json();
+		return data;
+	} catch(err){
+		console.log(err);
+	}
+}
+
+
+(async () => {
+	const useData3 = await getAPIPokemonAsyncComTryCathTerceiraChamada()
+	console.log(useData3);
+})
+
+
+// 7 - Organizando a quarta forma de chamar usando a API com o async, try, catch
+
+const getAPIPokemonAsyncComTryCathQuartaChamada = async (nome) => {
+	try {
+		const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`);
+		const data = await response.json();
+		return data;
+	} catch(err){
+		console.log(err);
+	}
+}
+
+(async () => {
+	const pokemon1 = await getAPIPokemonAsyncComTryCathQuartaChamada('charmander');
+	const pokemon2 = await getAPIPokemonAsyncComTryCathQuartaChamada('charmeleon');
+	const pokemon3 = await getAPIPokemonAsyncComTryCathQuartaChamada('charizard');
+
+	console.log({pokemon1, pokemon2, pokemon3});
+})()
+
+// 8 - Organizando a quinta forma de chamar usando a API com o async, try, catch
+
+const getAPIPokemonAsyncComTryCathQuintaChamada = async (nome) => {
+	try {
+		const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
+		const data = await response.json();
+		return data;
+	} catch(err){
+		console.log(err);
+	}
+}
 
