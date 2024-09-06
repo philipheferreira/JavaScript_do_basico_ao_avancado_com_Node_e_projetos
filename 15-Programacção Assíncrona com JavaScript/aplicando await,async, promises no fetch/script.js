@@ -1,6 +1,6 @@
 
 
-//Exemplificar o que acontece
+//1 - Exemplificar o que acontece
 const getAPIPokemon = () => {
 	const data = fetch('https://pokeapi.co/api/v2/'); // endereço da API que está sendo armazenado dentro de DATA
 	console.log(data); // imprime o que tem dentro de DATA, que é uma promise, pois ele tem o objetivo de dizer que naquela vai ter alguma coisa mas que ele ainda não tem a resposta, então é necessario avisar que só ira prosseguir possuindo essa resposta
@@ -11,7 +11,7 @@ console.log("Exemplo sem funcionalidades assincronas, apenas com a chamada fetch
 getAPIPokemon();
 
 
-// Primeira forma de fazer: Usando o Then, você avisa o javascript que tendo a resposta você retorna o valor
+// 2 - Primeira forma de fazer: Usando o Then, você avisa o javascript que tendo a resposta você retorna o valor
 
 const getAPIPokemonComThen = () => {
 	const data = fetch("https://pokeapi.co/api/v2/")
@@ -29,7 +29,7 @@ const getAPIPokemonComThen = () => {
 getAPIPokemonComThen();
 
 
-// Segunda forma de fazer: Usando async
+// 3 - Segunda forma de fazer: Usando async
 
 const getAPIPokemonAsync = async () => { // ela já espera que seja uma promise, tanto que ela não confirma nada
 	const response = await fetch('https://pokeapi.co/api/v2/'); // wait confirma a situação de que vai ter que esperar a resposta da API
@@ -43,16 +43,48 @@ getAPIPokemonAsync();
 
 
 const getAPIPokemonAsyncComTryCath = async () => {
-	try {
+	try { // primeiramente a função ira fazer aquilo dentro do try
 		const response = await fetch('https://pokeapi.co/api/v2/');
 		const data = await response.json();
 		console.log("Utilizando o async junto com o try catch");
 		console.log(data);
 		console.log("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
-	} catch (err) {
-		console.log(err);
+	} catch (err) { // caso ocorra algum erro dentro do try ela ira dentro do catch para pegar o erro
+		console.log(err); // O erro que foi pego será imprimido dentro do console.log
 	}
 }
 
 getAPIPokemonAsyncComTryCath();
+
+// 4 - Organizando a chamada usando a API com o async,try, catch
+
+const getAPIPokemonAsyncComTryCathPrimeiraChamada = async () => {
+	try {
+		const response = await fetch("https://pokeapi.co/api/v2/");
+		const data = await response.json();
+		return data;
+	} catch (err){
+		console.log(err)
+	}
+}
+
+const useData1 = getAPIPokemonAsyncComTryCathPrimeiraChamada();
+console.log(useData1);
+
+// 5 - Organizando a segundo forma de chamar usando a API com o asynct, try, catch 
+
+const getAPIPokemonAsyncComTryCathSegundaChamada = async () => {
+	try {
+		const response = await fetch("https://pokeapi.co/api/v2/");
+		const data = await response.json();
+		return data;
+	} catch(err){
+		console.log(err);
+	}
+}
+
+
+
+
+
