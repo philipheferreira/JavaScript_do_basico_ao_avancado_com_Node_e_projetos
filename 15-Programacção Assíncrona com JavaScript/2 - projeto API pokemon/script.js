@@ -16,9 +16,7 @@ let numeroTipo = 10;
 const getPokemon = async (id) => {
 	try {
 		const responsePokemon = await fetch(getPokemonUrl + "pokemon/" + id); // pega a url e direciona a id pokemon
-		const pokemonTipo = await fetch(getPokemonUrl+ "type/10");
 		const pokemon = await responsePokemon.json(); // converte para info json
-		const tipo = await pokemonTipo.json();
 		return pokemon; // retorna pokemon pesquisado
 
 	} catch(err){
@@ -56,6 +54,3 @@ let fecthPokemonInformacoes = (chamadaPokemonAPI, chamadaPokemonTipo) => {
 	pokemonPeso.innerHTML = "Peso: " + chamadaPokemonAPI.weight;
 	pokemonImagem.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + id + '.png';
 }
-
-
-
