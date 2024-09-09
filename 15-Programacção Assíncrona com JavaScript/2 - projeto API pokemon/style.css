@@ -10,10 +10,15 @@
 	align-items: center;
 	height: 300px;
 	width: 280px;
-	background-color: purple;
+	background-color: #b3b300;
 	border-radius: 20px;
 }
 
 .info-1{
 	display: flex;
+}
+
+.info-2{
+	display: flex;
+	justify-content: space-around;
 }

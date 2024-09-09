@@ -49,11 +49,11 @@ const getPokemonTipo = async (numeroTipo) => {
 // função que faz os repasses das informações da API para as variaveis no html
 let fecthPokemonInformacoes = (chamadaPokemonAPI, chamadaPokemonTipo) => {
 
-	pokemonNome.innerHTML = chamadaPokemonAPI.name; // repassa nome
+	pokemonNome.innerHTML ="- " + chamadaPokemonAPI.name; // repassa nome
 	pokemonId.innerHTML = chamadaPokemonAPI.id;
-	pokemonAltura.innerHTML = chamadaPokemonAPI.height;
-	pokemonPeso.innerHTML = chamadaPokemonAPI.weight;
-	pokemonTipo.innerHTML = chamadaPokemonTipo.name;
+	pokemonTipo.innerHTML = "Tipo: " + chamadaPokemonTipo.name;
+	pokemonAltura.innerHTML ="Altura: " + chamadaPokemonAPI.height;
+	pokemonPeso.innerHTML = "Peso: " + chamadaPokemonAPI.weight;
 	pokemonImagem.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + id + '.png';
 }
 
