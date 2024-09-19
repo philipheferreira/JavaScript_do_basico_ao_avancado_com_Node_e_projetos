@@ -61,6 +61,8 @@ let fecthPokemonInformacoes = (chamadaPokemonAPI, chamadaPokemonTipo, pokemonNom
 
 //informações que serão repassadas para fazer as buscas na API
 let idPokemon1 = 4;
+let idPokemon2 = 5;
+let idPokemon3 = 6;
 let numeroTipoPokemon1 = 10;
 
 // definição de id para chamadas e chamadas de todas as funções dentro da chamada assincrona
@@ -70,8 +72,15 @@ let numeroTipoPokemon1 = 10;
 	fecthPokemonInformacoes(chamadaPokemonAPI1, chamadaPokemonTipo1, pokemonNome1, pokemonId1, pokemonTipo1, pokemonAltura1, pokemonPeso1);
 	pokemonImagem1.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + idPokemon1 + '.png';
 
-	
+	let chamadaPokemonAPI2 = await getPokemon(idPokemon2);
+	let chamadaPokemonTipo2 = await getPokemonTipo(numeroTipoPokemon1);
+	fecthPokemonInformacoes(chamadaPokemonAPI2, chamadaPokemonTipo2, pokemonNome2, pokemonId2, pokemonTipo2, pokemonAltura2, pokemonPeso2);
+	pokemonImagem2.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + idPokemon2 + '.png';
 
-	console.log(chamadaPokemonAPI);
+	let chamadaPokemonAPI3 = await getPokemon(idPokemon3);
+	let chamadaPokemonTipo3 = await getPokemonTipo(numeroTipoPokemon1);
+	fecthPokemonInformacoes(chamadaPokemonAPI3, chamadaPokemonTipo3, pokemonNome3, pokemonId3, pokemonTipo3, pokemonAltura3, pokemonPeso3);
+	pokemonImagem3.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + idPokemon3 + '.png';
+
 })()
 
