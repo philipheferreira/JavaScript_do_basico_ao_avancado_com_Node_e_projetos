@@ -1,10 +1,24 @@
 //definição de variaveis que vão receber as infos do pokemon
-let pokemonImagem = document.querySelector(".imagem");
-let pokemonNome = document.querySelector(".nome");
-let pokemonId = document.querySelector(".Id");
-let pokemonTipo = document.querySelector(".tipo");
-let pokemonAltura = document.querySelector(".altura");
-let pokemonPeso = document.querySelector(".peso");
+let pokemonImagem1 = document.querySelector(".imagem1");
+let pokemonNome1 = document.querySelector(".nome1");
+let pokemonId1 = document.querySelector(".Id1");
+let pokemonTipo1 = document.querySelector(".tipo1");
+let pokemonAltura1 = document.querySelector(".altura1");
+let pokemonPeso1 = document.querySelector(".peso1");
+
+let pokemonImagem2 = document.querySelector(".imagem2");
+let pokemonNome2 = document.querySelector(".nome2");
+let pokemonId2 = document.querySelector(".Id2");
+let pokemonTipo2 = document.querySelector(".tipo2");
+let pokemonAltura2 = document.querySelector(".altura2");
+let pokemonPeso2 = document.querySelector(".peso2");
+
+let pokemonImagem3 = document.querySelector(".imagem3");
+let pokemonNome3 = document.querySelector(".nome3");
+let pokemonId3 = document.querySelector(".Id3");
+let pokemonTipo3 = document.querySelector(".tipo3");
+let pokemonAltura3 = document.querySelector(".altura3");
+let pokemonPeso3 = document.querySelector(".peso3");
 
 const getPokemonUrl = 'https://pokeapi.co/api/v2/' //url da API
 
@@ -34,7 +48,7 @@ const getPokemonTipo = async (numeroTipo) => {
 
 
 // função que faz os repasses das informações da API para as variaveis no html
-let fecthPokemonInformacoes = (chamadaPokemonAPI, chamadaPokemonTipo) => {
+let fecthPokemonInformacoes = (chamadaPokemonAPI, chamadaPokemonTipo, pokemonNome, pokemonId, pokemonTipo, pokemonAltura, pokemonPeso) => {
 
 	pokemonNome.innerHTML ="- " + chamadaPokemonAPI.name; // repassa nome
 	pokemonId.innerHTML = chamadaPokemonAPI.id;
@@ -51,10 +65,13 @@ let numeroTipoPokemon1 = 10;
 
 // definição de id para chamadas e chamadas de todas as funções dentro da chamada assincrona
 (async () => {
-	let chamadaPokemonAPI = await getPokemon(idPokemon1);
-	let chamadaPokemonTipo = await getPokemonTipo(numeroTipoPokemon1);
-	fecthPokemonInformacoes(chamadaPokemonAPI, chamadaPokemonTipo);
-	pokemonImagem.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + idPokemon1 + '.png';
+	let chamadaPokemonAPI1 = await getPokemon(idPokemon1);
+	let chamadaPokemonTipo1 = await getPokemonTipo(numeroTipoPokemon1);
+	fecthPokemonInformacoes(chamadaPokemonAPI1, chamadaPokemonTipo1, pokemonNome1, pokemonId1, pokemonTipo1, pokemonAltura1, pokemonPeso1);
+	pokemonImagem1.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/' + idPokemon1 + '.png';
+
+	
+
 	console.log(chamadaPokemonAPI);
 })()
 
