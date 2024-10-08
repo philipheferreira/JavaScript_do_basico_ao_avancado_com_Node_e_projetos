@@ -1,15 +1,15 @@
 
-	let passadorX = document.querySelector(".x-deslizar");
-	let passadorY = document.querySelector(".y-deslizar");
+	let rangeX = document.querySelector(".x-range");
+	let rangeY = document.querySelector(".y-range");
 
-	let valorX = document.querySelector(".x");
-	let valorY = document.querySelector(".y");
+	let valorX = document.querySelector(".mostrarValorX");
+	let valorY = document.querySelector(".mostrarValorY");
 	
 
 let atualizar = () => {
 
-	valorX.innerText = passadorX.value;
-	valorY.innerText = passadorY.value;
+	valorX.innerText = rangeX.value;
+	valorY.innerText = rangeY.value;
 }
 
 
