@@ -86,7 +86,7 @@ let pegarData = () => {
 
 		diasFaltando.innerHTML = totalDiasSobrando;
 
-		console.log("Dias para o proximo aniversario aniversario" + totalDiasSobrando);
+		console.log("Dias para o proximo aniversario aniversario " + totalDiasSobrando);
 	}
 
 	dataNascimento = valorNascimento.value;
