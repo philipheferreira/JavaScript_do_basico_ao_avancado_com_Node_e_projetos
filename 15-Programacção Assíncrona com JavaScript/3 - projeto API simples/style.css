@@ -12,3 +12,11 @@ body{
 	background-color: #FFF;
 }
 
+.texto{
+	margin: 0px 2%;
+}
+
+.preco{
+	color: #4d4d4d;
+	font-size: 22px;
+}
