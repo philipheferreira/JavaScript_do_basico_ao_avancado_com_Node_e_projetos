@@ -1,4 +1,9 @@
 
+.container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
 body{
 	background-color:  #cccccc;
 }
@@ -10,6 +15,10 @@ body{
 	text-align: center;
 	font-family: arial;
 	background-color: #FFF;
+}
+
+.imgConsole{
+	width: 100%; /* Imagem preenche largura maxima do card */
 }
 
 .texto{
